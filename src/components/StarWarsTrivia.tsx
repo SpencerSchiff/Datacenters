@@ -54,9 +54,9 @@ const triviaData: Round[] = [
       },
       {
         id: 6,
-        question: "What color is Yoda's lightsaber?",
-        options: ["Blue", "Red", "Green", "Purple"],
-        correctAnswer: 2,
+        question: "What does Yoda lift using the Force on Dagobah?",
+        options: ["Rocks", "Luke's X-wing", "R2-D2", "His walking stick"],
+        correctAnswer: 1,
         points: 10
       },
       {
@@ -82,9 +82,9 @@ const triviaData: Round[] = [
       },
       {
         id: 10,
-        question: "What do Ewoks live in?",
-        options: ["Caves", "Underground", "Tree houses", "Space ships"],
-        correctAnswer: 2,
+        question: "How many forms of communication is C-3PO fluent in?",
+        options: ["Over 1 million", "Over 6 million", "Over 3 million", "Over 10 million"],
+        correctAnswer: 1,
         points: 10
       }
     ]
@@ -108,16 +108,16 @@ const triviaData: Round[] = [
       },
       {
         id: 13,
-        question: "What is the name of Boba Fett's ship?",
-        options: ["Slave I", "Firespray", "Mandalorian", "Bounty Hunter"],
-        correctAnswer: 0,
+        question: "What bounty hunter captures Han Solo in carbonite?",
+        options: ["Jango Fett", "Boba Fett", "Dengar", "IG-88"],
+        correctAnswer: 1,
         points: 20
       },
       {
         id: 14,
-        question: "Who said 'I have a bad feeling about this' first in Episode IV?",
-        options: ["Han Solo", "Luke Skywalker", "Princess Leia", "C-3PO"],
-        correctAnswer: 1,
+        question: "What do Ewoks live in?",
+        options: ["Caves", "Underground", "Tree houses", "Space ships"],
+        correctAnswer: 2,
         points: 20
       },
       {
@@ -129,16 +129,16 @@ const triviaData: Round[] = [
       },
       {
         id: 16,
-        question: "Who composed the music for all six Star Wars films?",
-        options: ["Hans Zimmer", "Danny Elfman", "John Williams", "James Horner"],
-        correctAnswer: 2,
+        question: "What planet do Luke and Obi-Wan travel to rescue Princess Leia?",
+        options: ["Yavin 4", "Death Star", "Alderaan", "Mos Eisley"],
+        correctAnswer: 1,
         points: 20
       },
       {
         id: 17,
-        question: "What does AT-AT stand for?",
-        options: ["All Terrain Armored Transport", "Advanced Tactical Assault Tank", "Automated Transport Attack Tank", "Armored Terrain Assault Transport"],
-        correctAnswer: 0,
+        question: "Who destroys the second Death Star?",
+        options: ["Luke Skywalker", "Lando Calrissian", "Wedge Antilles", "Han Solo"],
+        correctAnswer: 1,
         points: 20
       },
       {
@@ -150,15 +150,15 @@ const triviaData: Round[] = [
       },
       {
         id: 19,
-        question: "What creature swallows Boba Fett?",
-        options: ["Rancor", "Sarlacc", "Wampa", "Krayt Dragon"],
-        correctAnswer: 1,
+        question: "What happens to Boba Fett during the sail barge battle?",
+        options: ["He escapes", "Luke kills him", "He falls into the pit", "Han shoots him"],
+        correctAnswer: 2,
         points: 20
       },
       {
         id: 20,
-        question: "How many forms of communication is C-3PO fluent in?",
-        options: ["Over 3 million", "Over 6 million", "Over 1 million", "Over 10 million"],
+        question: "What does C-3PO say about the odds of successfully navigating an asteroid field?",
+        options: ["1,000 to 1", "3,720 to 1", "5,000 to 1", "10,000 to 1"],
         correctAnswer: 1,
         points: 20
       }
@@ -169,50 +169,50 @@ const triviaData: Round[] = [
     questions: [
       {
         id: 21,
-        question: "What is the diameter of the first Death Star's main reactor exhaust port?",
+        question: "According to the Rebel briefing, how wide is the Death Star's exhaust port?",
         options: ["1 meter", "2 meters", "3 meters", "5 meters"],
         correctAnswer: 1,
         points: 30
       },
       {
         id: 22,
-        question: "What is the name of the planet where young Anakin wins the podrace?",
-        options: ["Tatooine", "Boonta", "Malastare", "Mos Espa"],
-        correctAnswer: 0,
+        question: "Complete Obi-Wan's line: 'These aren't the droids...'",
+        options: ["you want", "you're looking for", "we're looking for", "you need"],
+        correctAnswer: 1,
         points: 30
       },
       {
         id: 23,
-        question: "How many Jedi are seen in the Geonosis arena battle before reinforcements arrive?",
-        options: ["150", "200", "212", "180"],
+        question: "What does Vader say to Luke when he cuts off his hand?",
+        options: ["Join me, and together we can rule the galaxy", "Luke, I am your father", "No, I am your father", "The Force is strong with you"],
         correctAnswer: 2,
         points: 30
       },
       {
         id: 24,
-        question: "What is the name of the cantina band in Mos Eisley?",
-        options: ["Figrin D'an and the Modal Nodes", "Sy Snootles and the Max Rebo Band", "The Blue Milk Band", "Boba Fett's Band"],
-        correctAnswer: 0,
+        question: "What does Obi-Wan tell Luke about his father's death?",
+        options: ["He was betrayed by a young Jedi", "A young Jedi named Darth Vader betrayed and murdered him", "He died in the Clone Wars", "He was killed by the Emperor"],
+        correctAnswer: 1,
         points: 30
       },
       {
         id: 25,
-        question: "Who is the leader of the Separatist Council?",
-        options: ["Count Dooku", "General Grievous", "Nute Gunray", "Wat Tambor"],
-        correctAnswer: 2,
+        question: "What does Watto say about humans and podracing?",
+        options: ["They're too slow", "No human can do it", "It's impossible", "They always crash"],
+        correctAnswer: 1,
         points: 30
       },
       {
         id: 26,
-        question: "What is the name of the asteroid field where the Millennium Falcon hides?",
-        options: ["Hoth asteroid field", "Kessel asteroid field", "Anoat asteroid field", "Bespin asteroid field"],
-        correctAnswer: 0,
+        question: "What does Han Solo say right before entering hyperspace to escape Hoth?",
+        options: ["Here we go!", "Punch it!", "Never tell me the odds!", "Hold on!"],
+        correctAnswer: 1,
         points: 30
       },
       {
         id: 27,
-        question: "How many engines does a Podracer have?",
-        options: ["One", "Two", "Three", "Four"],
+        question: "Who said 'I have a bad feeling about this' first in Episode IV?",
+        options: ["Han Solo", "Luke Skywalker", "Princess Leia", "C-3PO"],
         correctAnswer: 1,
         points: 30
       },
@@ -232,8 +232,8 @@ const triviaData: Round[] = [
       },
       {
         id: 30,
-        question: "What is Anakin's podrace number in Episode I?",
-        options: ["7", "9", "11", "3"],
+        question: "Complete Obi-Wan's instruction to Luke: 'Use the Force, Luke. Let go...'",
+        options: ["trust your feelings", "your instincts", "let go your conscious self", "trust in the Force"],
         correctAnswer: 2,
         points: 30
       }
