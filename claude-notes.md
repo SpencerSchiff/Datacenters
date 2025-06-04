@@ -3,7 +3,9 @@
 ## Session Information
 - **Start Commit**: 749fb17 (feat: Implement lightsaber duel game with realistic physics and collision mechanics)
 - **Current Step**: COMPLETED - Star Wars Trivia Game
-- **Session Commits**: (will be added with commit)
+- **Session Commits**: 
+  - 41a78b5: feat: Implement Star Wars trivia game with 30 movie-only questions
+  - a7c945d: fix: Ensure all trivia questions use movie-only content and proper difficulty levels
 
 ## COMPLETED: Star Wars Trivia Game
 
@@ -63,12 +65,14 @@ Implemented a comprehensive Star Wars trivia game covering episodes 1-6 with thr
 - **300-399**: "Padawan! Good effort!"
 - **Below 300**: "Youngling! May the Force be with you!"
 
-### Content Validation
-All 30 questions strictly adhere to movie-only content from Episodes 1-6:
-- No expanded universe material
-- No TV shows, books, or games
-- Only information visible/audible in the theatrical releases
-- Questions test both casual and dedicated fan knowledge
+### Content Validation (FIXED)
+All 30 questions now strictly adhere to movie-only content from Episodes 1-6:
+- No expanded universe material (removed ship names, character names not spoken)
+- No credits or behind-the-scenes information (removed composer question)
+- No technical specifications not stated in dialogue (fixed exhaust port question)
+- Only information clearly spoken, shown, or displayed in theatrical releases
+- Removed questions requiring frame-by-frame analysis or external knowledge
+- Questions test both casual and dedicated fan knowledge through dialogue and plot events
 
 ### How to Play
 1. Start with Easy Round (10 questions)

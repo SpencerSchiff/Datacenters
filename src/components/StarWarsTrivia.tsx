@@ -249,6 +249,7 @@ export default function StarWarsTrivia() {
   const [showResult, setShowResult] = useState(false)
   const [roundScores, setRoundScores] = useState<number[]>([])
   const [gameComplete, setGameComplete] = useState(false)
+  const [showAllQuestions, setShowAllQuestions] = useState(false)
 
   const currentQuestionData = triviaData[currentRound]?.questions[currentQuestion]
 
@@ -295,6 +296,7 @@ export default function StarWarsTrivia() {
     setShowResult(false)
     setRoundScores([])
     setGameComplete(false)
+    setShowAllQuestions(false)
   }
 
   if (gameComplete) {
@@ -326,6 +328,57 @@ export default function StarWarsTrivia() {
     )
   }
 
+  if (showAllQuestions) {
+    return (
+      <div className="max-w-4xl mx-auto p-6">
+        <div className="card bg-base-200 shadow-xl">
+          <div className="card-body">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="card-title text-3xl">All Questions Preview</h2>
+              <button
+                className="btn btn-primary"
+                onClick={() => setShowAllQuestions(false)}
+              >
+                Back to Game
+              </button>
+            </div>
+
+            {triviaData.map((round, roundIndex) => (
+              <div key={roundIndex} className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-primary">
+                  {round.name} ({round.questions[0].points} points each)
+                </h3>
+                <div className="space-y-4">
+                  {round.questions.map((question, questionIndex) => (
+                    <div key={question.id} className="bg-base-100 p-4 rounded-lg">
+                      <div className="font-semibold mb-2">
+                        {questionIndex + 1}. {question.question}
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 text-sm">
+                        {question.options.map((option, optionIndex) => (
+                          <div
+                            key={optionIndex}
+                            className={`p-2 rounded ${
+                              optionIndex === question.correctAnswer
+                                ? 'bg-success text-success-content font-bold'
+                                : 'bg-base-200'
+                            }`}
+                          >
+                            {String.fromCharCode(65 + optionIndex)}. {option}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="max-w-2xl mx-auto p-6">
       <div className="card bg-base-200 shadow-xl">
@@ -335,6 +388,12 @@ export default function StarWarsTrivia() {
             <div className="text-right">
               <div className="text-sm">Score: {score}</div>
               <div className="text-xs">Question {currentQuestion + 1}/10</div>
+              <button
+                className="btn btn-sm btn-outline mt-1"
+                onClick={() => setShowAllQuestions(true)}
+              >
+                Show All Questions
+              </button>
             </div>
           </div>
 
