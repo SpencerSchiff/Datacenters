@@ -1,67 +1,83 @@
 # Claude Code Session Notes
 
 ## Session Information
-- **Start Commit**: 32d24cb (Initial commit)
-- **Current Step**: COMPLETED - Lightsaber Duel Game with Realistic Physics
+- **Start Commit**: 749fb17 (feat: Implement lightsaber duel game with realistic physics and collision mechanics)
+- **Current Step**: COMPLETED - Star Wars Trivia Game
 - **Session Commits**: (will be added with commit)
 
-## COMPLETED: Lightsaber Duel Game with Realistic Physics
+## COMPLETED: Star Wars Trivia Game
 
-Implemented a proper lightsaber combat game with realistic blade physics and collision mechanics as requested.
+Implemented a comprehensive Star Wars trivia game covering episodes 1-6 with three difficulty rounds as requested.
 
 ### ✅ Implemented Features
 
-**Physics System**:
-- ✅ Real collision detection using line segment intersection
-- ✅ Physics-based collision response with velocity transfer
-- ✅ Angular momentum and torque from collision impacts
-- ✅ Restitution (bounciness) factor for realistic deflections
-- ✅ Angular velocity and damping for blade movement
-- ✅ Smooth mouse-following controls with angular interpolation
+**Game Structure**:
+- ✅ Three rounds: Easy (10 pts), Medium (20 pts), Hard (30 pts)
+- ✅ 10 questions per round (30 total questions)
+- ✅ Multiple choice answers (A, B, C, D format)
+- ✅ Movie-only content from Episodes 1-6
 
-**Game Mechanics**:
-- ✅ Player controls green lightsaber with mouse cursor
-- ✅ Multiple enemy attack patterns: Swing, Thrust, Spin
-- ✅ Enemies approach from random sides of screen
-- ✅ Collision system with proper blade-to-blade interaction
-- ✅ Combo system that rewards consecutive blocks
-- ✅ Enemy stun mechanics on strong blocks
+**Question Categories by Difficulty**:
 
-**Visual Effects**:
-- ✅ Particle system for collision sparks
-- ✅ Dynamic glow effects that intensify during blocks
-- ✅ Visual feedback when blades collide
-- ✅ Combo counter display above player
-- ✅ Space-themed background with stars
-- ✅ Color-coded feedback (stunned enemies turn orange)
+**Easy Round (10 points each)**:
+- ✅ Basic character knowledge (Luke's home planet, Vader revelation)
+- ✅ Fundamental Star Wars concepts (Jedi weapons, ship names)
+- ✅ Simple plot points visible to casual viewers
+
+**Medium Round (20 points each)**:
+- ✅ Character relationships and training (Obi-Wan's master, ship names)
+- ✅ Specific dialogue and scenes
+- ✅ Planet names and vehicle designations
+- ✅ Character actions and consequences
+
+**Hard Round (30 points each)**:
+- ✅ Precise technical details (Death Star exhaust port size)
+- ✅ Specific numbers and measurements
+- ✅ Minor character names and references
+- ✅ Detailed scene knowledge requiring multiple viewings
 
 **Game Features**:
-- ✅ Health system (10 lives)
-- ✅ Score tracking with combo multipliers
-- ✅ Progressive difficulty with multiple enemies
-- ✅ Menu and game over screens
-- ✅ Responsive controls and smooth gameplay
+- ✅ Progress tracking with question counter
+- ✅ Round-based scoring system
+- ✅ Answer feedback (correct/incorrect with right answer shown)
+- ✅ Final score breakdown by round
+- ✅ Performance ranking (Youngling → Padawan → Jedi Knight → Jedi Master)
+- ✅ Play again functionality with full reset
 
-### Technical Implementation
-- **Physics Engine**: Custom 2D physics with collision detection and response
-- **Rendering**: Canvas-based with optimized particle effects
-- **Game Loop**: RequestAnimationFrame with delta time for consistent physics
-- **State Management**: React hooks with proper separation of concerns
+**UI/UX**:
+- ✅ Clean, Star Wars themed design using DaisyUI
+- ✅ Progress bar for each round
+- ✅ Visual feedback for selected answers
+- ✅ Smooth transitions between questions
+- ✅ Responsive layout
 
-### Key Difference from Previous Implementation
-Unlike the previous version where "nothing happened" when lightsabers touched, this implementation features:
-- Actual physics responses when blades collide
-- Lightsabers deflect off each other with proper momentum transfer
-- Angular velocity changes based on collision point
-- Visual and mechanical feedback for successful blocks
-- Realistic blade behavior that players expect from lightsaber combat
+### Scoring System
+- **Easy Questions**: 10 points each (100 points max per round)
+- **Medium Questions**: 20 points each (200 points max per round)  
+- **Hard Questions**: 30 points each (300 points max per round)
+- **Perfect Score**: 500 points total
+
+### Performance Rankings
+- **500 points**: "Jedi Master! Perfect score!"
+- **400-499**: "Jedi Knight! Excellent knowledge!"
+- **300-399**: "Padawan! Good effort!"
+- **Below 300**: "Youngling! May the Force be with you!"
+
+### Content Validation
+All 30 questions strictly adhere to movie-only content from Episodes 1-6:
+- No expanded universe material
+- No TV shows, books, or games
+- Only information visible/audible in the theatrical releases
+- Questions test both casual and dedicated fan knowledge
 
 ### How to Play
-1. Move your mouse to control the green lightsaber
-2. Position your blade to intercept red enemy lightsabers
-3. When blades collide, they deflect realistically with sparks
-4. Strong blocks can stun enemies (they turn orange)
-5. Build combos by blocking multiple attacks in succession
+1. Start with Easy Round (10 questions)
+2. Select answer by clicking A, B, C, or D
+3. Get immediate feedback on correctness
+4. Continue through Medium and Hard rounds
+5. View final score breakdown and ranking
+6. Option to play again
 
-### Relevant Files Modified
-- `/src/routes/index.tsx` - Complete game implementation with physics system
+### Relevant Files Created/Modified
+- `/src/components/StarWarsTrivia.tsx` - Complete trivia game component
+- `/src/routes/index.tsx` - Updated to display trivia game instead of lightsaber duel
